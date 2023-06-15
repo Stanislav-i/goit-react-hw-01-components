@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const Statistics = ({ title, stats }) => { 
     return (
       <section className="statistics">
-        {title.length > 0 ? (
+        {title ? (
                 <h2 className="title">{title }</h2>
         ) : null}
 
