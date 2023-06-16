@@ -13,16 +13,16 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
 
       <ul className={css.stats}>
         <li className={css.labelitem}>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <span className={css.label}>Followers</span>
+          <span className={css.quantity}>{stats.followers}</span>
         </li>
         <li className={css.labelitem}>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
+          <span className={css.label}>Views</span>
+          <span className={css.quantity}>{stats.views}</span>
         </li>
         <li className={css.labelitem}>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <span className={css.label}>Likes</span>
+          <span className={css.quantity}>{stats.likes}</span>
         </li>
       </ul>
     </div>
@@ -30,8 +30,8 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
 };
 
 Profile.propTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-    avatar: PropTypes.string,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
 };

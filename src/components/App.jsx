@@ -11,6 +11,7 @@ export const App = () => {
   return (
     <div
       style={{
+        backgroundColor: 'rgb(236, 236, 236)',
         // height: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -28,7 +29,7 @@ export const App = () => {
         stats={user.stats}
       />
 
-      <Statistics title="" stats={data} />
+      <Statistics title="UPLOAD STATS" stats={data} />
 
       <FriendList friends={friends} />
 
