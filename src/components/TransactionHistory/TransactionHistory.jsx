@@ -1,28 +1,28 @@
 import css from './TransactionHistory.module.css';
 import PropTypes from 'prop-types';
-import { Transaction } from "./Transaction";
+import { Transaction } from './Transaction';
 import { Fragment } from 'react';
 
 export const TransactionHistory = ({ transactionHistory }) => {
-    return (
-      <table>
-        <thead>
-          <tr>
-            <th>TYPE</th>
-            <th>AMOUNT</th>
-            <th>CURRENCY</th>
-          </tr>
-        </thead>
+  return (
+    <table className={css.historytable}>
+      <thead>
+        <tr>
+          <th>TYPE</th>
+          <th>AMOUNT</th>
+          <th>CURRENCY</th>
+        </tr>
+      </thead>
 
-        <tbody>
-          {transactionHistory.map(({ id, type, amount, currency }) => (
-            <Fragment key={id}>
-              <Transaction type={type} amount={amount} currency={currency} />
-            </Fragment>
-          ))}
-        </tbody>
-      </table>
-    );
+      <tbody>
+        {transactionHistory.map(({ id, type, amount, currency }) => (
+          <Fragment key={id}>
+            <Transaction type={type} amount={amount} currency={currency} />
+          </Fragment>
+        ))}
+      </tbody>
+    </table>
+  );
 };
 
 TransactionHistory.propTypes = {

@@ -1,7 +1,7 @@
 import css from './FriendList.module.css';
 import PropTypes from 'prop-types';
 
-export const Friend = ({ avatar, name, isOnline}) => {
+export const Friend = ({ avatar, name, isOnline }) => {
   return (
     <>
       {isOnline ? (
@@ -11,7 +11,7 @@ export const Friend = ({ avatar, name, isOnline}) => {
       )}
       <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
       <p className={css.name}>{name}</p>
-   </>
+    </>
   );
 };
 

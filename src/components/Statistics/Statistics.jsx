@@ -1,29 +1,29 @@
 import css from './Statistics.module.css';
 import PropTypes from 'prop-types';
 
-export const Statistics = ({ title, stats }) => { 
-    return (
-      <section className={css.statistics}>
-        {title ? <h2 className={css.title}>{title}</h2> : null}
+export const Statistics = ({ title, stats }) => {
+  return (
+    <section className={css.statistics}>
+      {title ? <h2 className={css.title}>{title}</h2> : null}
 
-        <ul className={css.statlist}>
-          {stats.map(data => (
-            <li
-              key={data.id}
-              className={css.item}
-              style={{
-                backgroundColor: getRandomHexColor(),
-                color: 'white',
-              }}
-            >
-              <span className="label">{data.label}</span>
-              <span className="percentage">{data.percentage}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-    );
-}
+      <ul className={css.statlist}>
+        {stats.map(data => (
+          <li
+            key={data.id}
+            className={css.item}
+            style={{
+              backgroundColor: getRandomHexColor(),
+              color: 'white',
+            }}
+          >
+            <span className="label">{data.label}</span>
+            <span className="percentage">{data.percentage}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
 Statistics.propTypes = {
   title: PropTypes.string,
